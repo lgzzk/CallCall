@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <!-- 定义渐变 -->
+    <defs>
+        <!-- 主背景渐变 -->
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#47A1FF"/>
+            <stop offset="100%" style="stop-color:#2C84FF"/>
+        </linearGradient>
+        
+        <!-- 高光渐变 -->
+        <linearGradient id="highlight" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:rgba(255,255,255,0.4)"/>
+            <stop offset="100%" style="stop-color:rgba(255,255,255,0)"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- 主背景圆 -->
+    <circle cx="100" cy="100" r="90" fill="url(#bgGradient)"/>
+    
+    <!-- 高光效果 -->
+    <path d="M30 100 A70 70 0 0 1 170 100" 
+          stroke="url(#highlight)"
+          stroke-width="40"
+          fill="none"
+          opacity="0.5"/>
+    
+    <!-- 电话图标 -->
+    <g transform="translate(100,100) rotate(-45) translate(-100,-100)">
+        <!-- 手机形状 -->
+        <path d="M70 60
+                 L130 60
+                 Q140 60 140 70
+                 L140 130
+                 Q140 140 130 140
+                 L70 140
+                 Q60 140 60 130
+                 L60 70
+                 Q60 60 70 60
+                 Z" 
+              fill="white"/>
+              
+        <!-- 听筒 -->
+        <rect x="85" y="70" width="30" height="5" rx="2" fill="#47A1FF" opacity="0.8"/>
+        
+        <!-- 键盘区域装饰 -->
+        <g transform="translate(75,85)">
+            <circle cx="10" cy="10" r="3" fill="#47A1FF" opacity="0.8"/>
+            <circle cx="25" cy="10" r="3" fill="#47A1FF" opacity="0.8"/>
+            <circle cx="40" cy="10" r="3" fill="#47A1FF" opacity="0.8"/>
+            
+            <circle cx="10" cy="25" r="3" fill="#47A1FF" opacity="0.8"/>
+            <circle cx="25" cy="25" r="3" fill="#47A1FF" opacity="0.8"/>
+            <circle cx="40" cy="25" r="3" fill="#47A1FF" opacity="0.8"/>
+            
+            <circle cx="10" cy="40" r="3" fill="#47A1FF" opacity="0.8"/>
+            <circle cx="25" cy="40" r="3" fill="#47A1FF" opacity="0.8"/>
+            <circle cx="40" cy="40" r="3" fill="#47A1FF" opacity="0.8"/>
+        </g>
+    </g>
+</svg>

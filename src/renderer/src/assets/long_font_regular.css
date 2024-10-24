@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'HarmonyOS_Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/HarmonyOS_Regular.m.woff2') format('woff2');
+  unicode-range: U+8d24-8d31,U+8d34-8d35,U+8d37-8d3f,U+8d41-8d45,U+8d48,U+8d4a-8d4c,U+8d4e-8d50,U+8d54,U+8d56,U+8d58,U+8d5a-8d5b,U+8d5d-8d5e,U+8d60-8d64,U+8d66-8d67,U+8d6b,U+8d70,U+8d74-8d77,U+8d81,U+8d85,U+8d8a-8d8b,U+8d9f,U+8da3,U+8db3-8db4,U+8db8,U+8dbe-8dbf,U+8dc3-8dc4,U+8dcb-8dcc,U+8dd1,U+8dd7,U+8ddb,U+8ddd,U+8ddf,U+8de4,U+8de8,U+8dea,U+8def,U+8df3,U+8df5,U+8df7,U+8dfa-8dfb,U+8e09-8e0a,U+8e0c,U+8e0f,U+8e1d-8e1e,U+8e22,U+8e29-8e2a,U+8e2e,U+8e31,U+8e35,U+8e39,U+8e42;
+}
+@font-face {
+  font-family: 'HarmonyOS_Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/HarmonyOS_Regular.w.woff2') format('woff2');
+  unicode-range: U+7981,U+7984-7985,U+798f,U+79b9,U+79bb,U+79bd-79be,U+79c0-79c1,U+79c3,U+79c6,U+79c9,U+79cb,U+79cd,U+79d1-79d2,U+79d8,U+79df,U+79e3-79e4,U+79e6-79e7,U+79e9,U+79ef-79f0,U+79f8,U+79fb,U+79fd,U+7a00,U+7a0b,U+7a0d-7a0e,U+7a14,U+7a17,U+7a1a,U+7a20,U+7a33,U+7a37,U+7a39,U+7a3b-7a3d,U+7a3f,U+7a46,U+7a51,U+7a57,U+7a74,U+7a76-7a77,U+7a79-7a7a,U+7a7f,U+7a81,U+7a83-7a84,U+7a88,U+7a8d,U+7a91-7a92,U+7a95-7a98,U+7a9c-7a9d,U+7a9f,U+7aa5-7aa6,U+7abf,U+7acb,U+7ad6,U+7ad9,U+7ade-7ae0,U+7ae3,U+7ae5-7ae6,U+7aed,U+7aef,U+7af9,U+7afd,U+7aff,U+7b03,U+7b06,U+7b08,U+7b0b,U+7b11,U+7b14,U+7b19,U+7b1b,U+7b20,U+7b26,U+7b28,U+7b2c,U+7b3a,U+7b3c,U+7b49,U+7b4b;
+}
+@font-face {
+  font-family: 'HarmonyOS_Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/HarmonyOS_Regular.y.woff2') format('woff2');
+  unicode-range: U+761f,U+7624,U+7626,U+7629-762b,U+7634-7635,U+7638,U+763e,U+764c,U+7656,U+765e,U+7663,U+766b,U+7678,U+767b,U+767d-767e,U+7682,U+7684,U+7686-7688,U+768b,U+768e,U+7691,U+7693,U+7696,U+7699,U+76ae,U+76b1,U+76b4,U+76bf,U+76c2,U+76c5-76c6,U+76c8,U+76ca,U+76ce-76d2,U+76d4,U+76d6-76d8,U+76db,U+76df,U+76ee-76ef,U+76f2,U+76f4,U+76f8-76f9,U+76fc,U+76fe,U+7701,U+7708-7709,U+770b,U+771f-7720,U+7726,U+7728-7729,U+772f,U+7736-7738,U+773a,U+773c,U+7740-7741,U+7750-7751,U+775a-775b,U+7761,U+7763,U+7765-7766,U+7768,U+776b-776c,U+7779,U+777d,U+777f,U+7784-7785,U+778c,U+778e,U+7791-7792,U+779f-77a0,U+77a5,U+77a7,U+77a9;
+}
+@font-face {
+  font-family: 'HarmonyOS_Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/HarmonyOS_Regular.ab.woff2') format('woff2');
+  unicode-range: U+706d,U+706f-7070,U+7075-7076,U+7078,U+707c,U+707e-707f,U+7089-708a,U+708e,U+7092,U+7094-7096,U+7099,U+70ab-70af,U+70b1,U+70b3,U+70b8-70b9,U+70bc-70bd,U+70c1-70c3,U+70c8,U+70ca,U+70d8-70d9,U+70db,U+70df,U+70e4,U+70e6-70e7,U+70e9,U+70eb-70ed,U+70ef,U+70f7,U+70f9,U+70fd,U+7109-710a,U+7115,U+7119-711a,U+7126,U+7130-7131,U+7136,U+714c,U+714e,U+715e,U+7164,U+7166-7168,U+716e,U+7172-7173,U+717d,U+7184,U+718a,U+718f,U+7194,U+7198-7199,U+719f-71a0,U+71a8,U+71ac,U+71b9,U+71c3,U+71ce,U+71d5,U+71e5,U+7206,U+722a,U+722c,U+7231,U+7235-7239,U+723d,U+7247-7248,U+724c-724d,U+7252,U+7259,U+725b;
+}
+@font-face {
+  font-family: 'HarmonyOS_Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/HarmonyOS_Regular.an.woff2') format('woff2');
+  unicode-range: U+5e7f,U+5e84,U+5e86-5e87,U+5e8a,U+5e8f-5e90,U+5e93-5e97,U+5e99-5e9a,U+5e9c,U+5e9e-5e9f,U+5ea6-5ea7,U+5ead,U+5eb5-5eb8,U+5ec9-5eca,U+5ed1,U+5ed3,U+5ed6,U+5ef6-5ef7,U+5efa,U+5f00,U+5f02-5f04,U+5f08,U+5f0a-5f0b,U+5f0f,U+5f11,U+5f13,U+5f15,U+5f17-5f18,U+5f1b,U+5f1f-5f20,U+5f25-5f27,U+5f29,U+5f2f,U+5f31,U+5f39-5f3a,U+5f52-5f53,U+5f55,U+5f57,U+5f5d,U+5f62,U+5f64,U+5f66,U+5f69-5f6a,U+5f6c-5f6d,U+5f70-5f71,U+5f77,U+5f79,U+5f7b-5f7c,U+5f80-5f81,U+5f84-5f85,U+5f87-5f8b,U+5f90,U+5f92,U+5f95,U+5f97-5f98,U+5fa1,U+5fa8,U+5faa,U+5fad-5fae,U+5fb5,U+5fb7,U+5fbc-5fbd,U+5fc3,U+5fc5-5fc6;
+}
+@font-face {
+  font-family: 'HarmonyOS_Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/HarmonyOS_Regular.av.woff2') format('woff2');
+  unicode-range: U+5348-534a,U+534e-534f,U+5351-5353,U+5355-5357,U+535a,U+535c,U+535e-5362,U+5364,U+5366-5367,U+536b,U+536f-5371,U+5373-5375,U+5377-5378,U+537f,U+5382,U+5384-5386,U+5389,U+538b-538c,U+5395,U+5398,U+539a,U+539f,U+53a2,U+53a5-53a6,U+53a8-53a9,U+53ae,U+53bb,U+53bf,U+53c1-53c2,U+53c8-53cd,U+53d1,U+53d4,U+53d6-53d9,U+53db,U+53df-53e0,U+53e3-53e6,U+53e8-53f3,U+53f6-53f9,U+53fc-53fd,U+5401,U+5403-5404,U+5408-540a,U+540c-5410;
+}
+@font-face {
+  font-family: 'HarmonyOS_Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/HarmonyOS_Regular.ax.woff2') format('woff2');
+  unicode-range: U+50cf,U+50d6,U+50da,U+50e7,U+50ee,U+50f3,U+50f5,U+50fb,U+5106,U+510b,U+5112,U+5121,U+513f-5141,U+5143-5146,U+5148-5149,U+514b,U+514d,U+5151,U+5154,U+515a,U+515c,U+5162,U+5165,U+5168,U+516b-516e,U+5170-5171,U+5173-5179,U+517b-517d,U+5180,U+5185,U+5188-5189,U+518c-518d,U+5192,U+5195,U+5197,U+5199,U+519b-519c,U+51a0,U+51a2,U+51a4-51a5,U+51ac,U+51af-51b0,U+51b2-51b3,U+51b5-51b7,U+51bb,U+51bd,U+51c0,U+51c4,U+51c6,U+51c9,U+51cb-51cc,U+51cf,U+51d1,U+51db,U+51dd,U+51e0-51e1,U+51e4,U+51ed,U+51ef-51f0,U+51f3,U+51f6,U+51f8-51fb,U+51fd,U+51ff-5201,U+5203,U+5206;
+}
+@font-face {
+  font-family: 'HarmonyOS_Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/HarmonyOS_Regular.a1.woff2') format('woff2');
+  unicode-range: U+21-7e,U+a4,U+a7-a8,U+b0-b1,U+b7;
+}

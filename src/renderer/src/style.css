@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --text: #9499a0;
+}
+
+body {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-color: #a1c4fd;
+    width: 100vw;
+    height: 100vh;
+    font-family: PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif !important;
+}
