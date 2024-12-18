@@ -12,7 +12,7 @@
       </div>
     </div>
     <img class="w-[105px] mt-[128px] rounded-full" src="../../assets/icons/jz.jpg" />
-    <span class="mt-[20px] mb-[37px] hover:text-blue-500 no-drag"
+    <span class="mt-[20px] mb-[37px]"
     >片=======)</span
     >
     <button
@@ -22,7 +22,7 @@
       登录
     </button>
     <div class="mt-[50px] flex items-center text-[#0099FF] no-drag">
-      <span class="text-[14px] cursor-pointer">移出账号</span>
+      <span class="text-[14px] cursor-pointer">添加账号</span>
       <div class="w-[.75px] h-[12px] bg-[#D2D4D6] mx-2"></div>
       <span class="text-[14px] cursor-pointer">移出账号</span>
     </div>
