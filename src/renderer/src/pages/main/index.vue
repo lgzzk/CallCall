@@ -7,11 +7,5 @@
 </script>
 
 <style scoped>
-.no-drag {
-  -webkit-app-region: no-drag;
-}
 
-.drag {
-  -webkit-app-region: drag;
-}
 </style>
