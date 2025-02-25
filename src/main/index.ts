@@ -32,7 +32,7 @@ const createLoginWindow = (): void => {
   ipcMain.on('close-login', () => loginWindow.close())
 
   ipcMain.on('login-success', () => {
-    // loginWindow.close()
+    loginWindow.close()
     createMainWindow()
   })
 
@@ -57,12 +57,12 @@ const createMainWindow = (): void => {
   let mainWindow = new BrowserWindow({
     width: 908,
     height: 587,
-    resizable: false,
+    resizable: true,
     show: false,
     icon: path.join(__dirname, '../../resources/icons/im-logo.png'),
     frame: false,
     title: 'CaLLCaLL',
-    maximizable: false,
+    maximizable: true,
     roundedCorners: true,
     transparent: false,
     autoHideMenuBar: true,
@@ -77,6 +77,8 @@ const createMainWindow = (): void => {
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
   })
+
+  ipcMain.on('close-main', () => mainWindow.close())
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)

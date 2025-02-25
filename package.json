@@ -30,17 +30,16 @@
     "@electron-toolkit/tsconfig": "^1.0.1",
     "@types/node": "^22.7.7",
     "@vitejs/plugin-vue": "^5.1.4",
+    "autoprefixer": "^10.4.19",
     "electron": "^33.0.1",
     "electron-builder": "^25.1.8",
     "electron-vite": "^2.3.0",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.9",
-    "vue": "^3.5.12",
-    "vue-tsc": "^2.1.6",
-    "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
-    "vite-svg-loader": "^5.1.0"
-  },
-  "packageManager": "yarn@4.5.3+sha512.3003a14012e2987072d244c720506549c1aab73ee728208f1b2580a9fd67b92d61ba6b08fe93f6dce68fd771e3af1e59a0afa28dd242dd0940d73b95fedd4e90"
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9",
+    "vite-svg-loader": "^5.1.0",
+    "vue": "^3.5.12",
+    "vue-tsc": "^2.1.6"
+  }
 }
