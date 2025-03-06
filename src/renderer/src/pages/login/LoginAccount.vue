@@ -2,16 +2,16 @@
   <div
     class="h-screen px-8 flex flex-col items-center text-[14px] select-none"
   >
-    <img class="w-[90px] rounded-full mt-[60px]" src="@renderer/assets/icons/im-logo.png" />
+    <img class="w-[90px] rounded-full mt-[60px]" src="../../assets/icons/im-logo.png" />
     <div class="relative input-item mb-[15px] mt-[20px]">
       <input
-        v-model="account"
+        v-model="username"
         type="text"
-        placeholder="输入CC号"
+        placeholder="输入用户名"
         maxlength="12"
         class="input">
       <close-svg
-        v-if="account"
+        v-if="username"
         @click="clearAccount"
         class="absolute top-1/2 -translate-y-1/2 text-[#999999] right-[10px] w-[21px] cursor-pointer"
       />
@@ -20,7 +20,7 @@
       <input
         v-model="password"
         type="password"
-        placeholder="输入CC密码"
+        placeholder="输入密码"
         maxlength="12"
         class="input">
       <close-svg
@@ -31,7 +31,7 @@
     </div>
     <button
       @click="login"
-      :class="[account && password ? 'but' : 'but-forbid']"
+      :class="[username && password ? 'but' : 'but-forbid']"
       class="w-full h-[37px] text-white text-[15px] rounded-[8px] no-drag cursor-auto"
     >
       登录
@@ -42,16 +42,19 @@
 <script setup lang="ts">
 import CloseSvg from '@renderer/assets/icons/close_16.svg'
 import { ref } from 'vue'
+import { userLogin } from '@renderer/api/auth'
 
-const account = ref<number | null>(null)
-const password = ref<number | null>(null)
+const username = ref<string | null>(null)
+const password = ref<string | null>(null)
 
-const clearAccount = () => account.value = null
+const clearAccount = () => username.value = null
 const clearPassword = () => password.value = null
 
-const login = () => {
-  if (account.value && password.value)
-    window.electron.ipcRenderer.send('login-success')
+const login = async () => {
+  if (username.value && password.value) {
+    const data = await userLogin(username.value, password.value)
+    if (data.success) window.electron.ipcRenderer.send('login-success')
+  }
 }
 </script>
 
@@ -64,11 +67,11 @@ const login = () => {
   @apply w-full flex bg-white overflow-hidden rounded-[8px];
 }
 
-.but-forbid{
+.but-forbid {
   @apply bg-[#82C9FF] cursor-not-allowed;
 }
 
-.but{
+.but {
   @apply bg-[#0099FF] hover:bg-[#008DEB] active:bg-[#0081D6] cursor-pointer;
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex w-full py-2 px-5"
+    class="flex w-full py-3 px-5"
     :class="{'justify-end' : isMe}">
     <!-- 左边消息布局 -->
     <template v-if="!isMe">

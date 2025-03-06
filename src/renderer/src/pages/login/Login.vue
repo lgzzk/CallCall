@@ -2,7 +2,7 @@
   <div
     class="h-screen flex flex-col items-center select-none"
   >
-    <img class="w-[105px] mt-[128px] rounded-full" src="@renderer/assets/icons/jz.jpg" />
+    <img class="w-[105px] mt-[128px] rounded-full" src="../../assets/icons/jz.jpg" />
     <span class="mt-[20px] mb-[37px]">片=======)</span>
     <button
       @click="login"

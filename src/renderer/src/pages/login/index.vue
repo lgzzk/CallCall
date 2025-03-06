@@ -20,8 +20,8 @@
 </template>
 
 <script setup lang="ts">
-import Login from '@renderer/pages/login/cmp/Login.vue'
-import LoginAccount from '@renderer/pages/login/cmp/LoginAccount.vue'
+import Login from '@renderer/pages/login/Login.vue'
+import LoginAccount from '@renderer/pages/login/LoginAccount.vue'
 import SettingSvg from '@renderer/assets/icons/Setting.svg'
 import CloseSvg from '@renderer/assets/icons/close_16.svg'
 import { ref } from 'vue'
