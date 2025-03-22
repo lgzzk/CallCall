@@ -17,17 +17,13 @@
     </div>
 
     <div class="flex-1 overflow-y-auto">
-      <!-- 左边消息 -->
-      <MessageItem content="这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息" />
-      <MessageItem content="这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息" />
-      <MessageItem content="这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息" />
-      <MessageItem content="这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息这是别人发送的消息" />
-
-      <!-- 右边消息 -->
-      <MessageItem content="这是我发送的消息" :is-me="true" />
-      <MessageItem content="这是我发送的消息" :is-me="true" />
+      <message-item
+        v-for="i in messageList[currentConversationId]"
+        :key="i.id+'message'"
+        :content="i.content"
+        :isMe="i.isMe"
+      />
     </div>
-
     <div class="flex flex-col no-drag w-full h-[150px]">
       <div class="flex items-start space-x-4 py-2 px-5 icon-container">
         <expression-svg />
@@ -37,7 +33,11 @@
         <lucky-money-svg />
         <microphone-svg />
       </div>
-      <input class="w-full bg-transparent px-5 outline-none">
+      <input
+        @keydown.enter="sendMessage"
+        v-model="message"
+        class="w-full bg-transparent px-5 outline-none"
+      >
     </div>
 
 
@@ -58,7 +58,74 @@ import ShakeSvg from '@renderer/assets/icons/shake_16.svg'
 import MicrophoneSvg from '@renderer/assets/icons/Microphone.svg'
 import LuckyMoneySvg from '@renderer/assets/icons/lucky_money_16.svg'
 import MessageItem from '@renderer/pages/main/message/MessageItem.vue'
+import { useMessageStore } from '@renderer/store/messageStore'
+import { storeToRefs } from 'pinia'
+import { ref } from 'vue'
+import http from '@renderer/utils/request'
+import socket from '@renderer/utils/socket'
 
+const message = ref('')
+const messageStore = useMessageStore()
+const { currentConversationId } = storeToRefs(messageStore)
+const messageList = ref([
+  [
+    {
+      id: 1,
+      content: '😜😊❤️😉😉😉',
+      isMe: false
+    },
+    {
+      id: 2,
+      content: 'asdasdasdasd❤️❤️❤️',
+      isMe: true
+    }
+  ],
+  [
+    {
+      id: 3,
+      content: 'asdasdasdasd',
+      isMe: true
+    },
+    {
+      id: 4,
+      content: 'asdasdas🙌dasd',
+      isMe: false
+    }
+  ]
+])
+
+const sendMessage = _=>{
+
+  if (!message.value.trim()){
+    alert('消息内容不能为空')
+    return
+  }
+
+  messageList.value[currentConversationId.value].push({
+    content: message.value,
+    isMe: true,
+    id: 5
+  })
+
+  http.post('/api/message/sendMessage', {
+    receiverId:'67c47439e80377352513b3e0',
+    content: message.value,
+  }).then((res)=>{
+    console.log(res)
+  })
+
+  message.value = ''
+
+}
+
+socket.on('privateMessage', (data)=>{
+  console.log(data)
+  messageList.value[currentConversationId.value].push({
+    content: data.message.content,
+    isMe: false,
+    id: 5
+  })
+})
 
 </script>
 

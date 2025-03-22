@@ -32,7 +32,7 @@ const createLoginWindow = (): void => {
   ipcMain.on('close-login', () => loginWindow.close())
 
   ipcMain.on('login-success', () => {
-    loginWindow.close()
+    // loginWindow.close()
     createMainWindow()
   })
 

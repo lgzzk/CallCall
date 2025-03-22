@@ -18,6 +18,7 @@
     </div>
     <div class="relative input-item mb-[30px]">
       <input
+        @keydown.enter="login"
         v-model="password"
         type="password"
         placeholder="输入密码"
@@ -43,17 +44,22 @@
 import CloseSvg from '@renderer/assets/icons/close_16.svg'
 import { ref } from 'vue'
 import { userLogin } from '@renderer/api/auth'
+import { setLocalStorage } from '@renderer/utils/localStorage'
 
-const username = ref<string | null>(null)
-const password = ref<string | null>(null)
+const username = ref("lgzzk")
+const password = ref("123456")
 
-const clearAccount = () => username.value = null
-const clearPassword = () => password.value = null
+const clearAccount = () => username.value = ""
+const clearPassword = () => password.value = ""
 
 const login = async () => {
   if (username.value && password.value) {
     const data = await userLogin(username.value, password.value)
-    if (data.success) window.electron.ipcRenderer.send('login-success')
+    if (data.success){
+      setLocalStorage('token', "Bearer "+data.token)
+      setLocalStorage('user', data.user)
+      window.electron.ipcRenderer.send('login-success')
+    }
   }
 }
 </script>

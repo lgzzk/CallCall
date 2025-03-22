@@ -20,8 +20,16 @@ import SidebarNav from '@renderer/pages/main/SidebarNav.vue'
 import CloseSvg from '@renderer/assets/icons/close_16.svg'
 import MaxSvg from '@renderer/assets/icons/max_16.svg'
 import MinSvg from '@renderer/assets/icons/minimize_16.svg'
+import { setLoginToSocket } from '@renderer/utils/socket'
+import { getLocalStorage } from '@renderer/utils/localStorage'
+import { User } from '@renderer/api/type/auth'
 
+const user = getLocalStorage<User>('user')
 const closeMain = () => window.electron.ipcRenderer.send('close-main')
+
+
+setLoginToSocket(user.id)
+
 </script>
 
 <style scoped>

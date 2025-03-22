@@ -9,16 +9,26 @@
         <add-svg class="w-[16px] text-[#ACACAC]" />
       </div>
     </div>
-    <viewprot/>
-    <viewprot/>
-    <viewprot/>
-    <viewprot/>
+    <conversation
+      v-for="i in 5"
+      :key="i+'conversation'"
+      @click="setConversationId(i-1)"
+      class="cursor-pointer"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import AddSvg from '@renderer/assets/icons/add_24.svg'
-import Viewprot from '@renderer/pages/main/message/Viewprot.vue'
+import Conversation from '@renderer/pages/main/message/Conversation.vue'
+import { useMessageStore } from '@renderer/store/messageStore'
+
+const messageStore = useMessageStore()
+
+function setConversationId(id: number){
+  messageStore.currentConversationId = id
+}
+
 </script>
 
 <style scoped>
